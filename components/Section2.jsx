@@ -16,11 +16,11 @@ const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 const poppinlight = Poppins({ weight: "400", subsets: ["latin"] });
 export default function Section2() {
   return (
-    <div className="h-[120vh] bg-[#01091c] relative">
+    <div className="h-screen lg:h-[120vh] w-screen bg-[#01091c] relative">
       <div className="flex flex-col md:flex-row items-center">
         {" "}
         {/* Upper Section */}
-        <div className=" w-screen md:w-1/3 md:ml-40 h-fit md:h-60  flex flex-col md:justify-center">
+        <div className=" w-screen lg:w-1/3 lg:ml-40 h-fit lg:h-60  flex flex-col lg:justify-center">
           <p className={` w-full text-[#829fe1] text-md sm:text-xl mt-6 text-center sm:mt-20 sm:pl-4 ${lato.className}`}>
             Powered by Crypto.com
           </p>
@@ -30,7 +30,7 @@ export default function Section2() {
             Get your IDEA
           </h2>
         </div>
-        <div className=" flex items-center w-full h-fit md:h-60 overflow-hidden">
+        <div className=" sm:z-10 flex items-center w-full h-fit md:h-60 overflow-hidden">
           <motion.div
             animate={{
               x: [820, -500, 820],
@@ -105,7 +105,7 @@ export default function Section2() {
         </div>
       </div>
 
-      <div className="absolute top-44 md:top-80 md:left-[29.5%]">
+      <div className="absolute top-44 md:top-80 md:left-[29.5%] z-0 ">
         <Image src={Vector} alt="Vector" height={260} width={260}></Image>
       </div>
     </div>

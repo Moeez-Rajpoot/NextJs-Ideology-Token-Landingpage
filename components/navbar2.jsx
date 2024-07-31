@@ -4,7 +4,11 @@ import Logo from "../public/assets/logo.svg";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import { Poppins } from "next/font/google";
 
 const Poppin = Poppins({
@@ -17,14 +21,26 @@ const Navbar = () => {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const userMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      if (
+        hamburgerRef.current &&
+        hamburgerRef.current.contains(event.target)
+      ) {
+        return;
+      }
       if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
         setIsUserMenuOpen(false);
-      }
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
         setIsOpen(false);
+      }
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+        setIsUserMenuOpen(false);
       }
     };
 
@@ -34,20 +50,25 @@ const Navbar = () => {
     };
   }, []);
 
-
-
   return (
     <>
       <nav
         id="navbar"
         className="bg-[#000e19] p-1 relative top-0 h-[90px] w-full z-10 flex items-center justify-between border-b-[1px] border-opacity-15 border-gray-200"
       >
-        <Image width={140} height={140} className="ml-6" src={Logo} alt="logo" />
+        <Image
+          width={140}
+          height={140}
+          className="ml-6"
+          src={Logo}
+          alt="logo"
+        />
         <div className="flex items-center ">
           <button
-            className="hamburger block md:hidden px-3 py-2 rounded text-white"
+            ref={hamburgerRef}
+            onClick={() => {setIsOpen(!isOpen)}}
+            className="hamburger block md:hidden px-3 py-2 rounded text-white z-40"
             aria-label="Toggle menu"
-            onClick={() => setIsOpen(!isOpen)}
           >
             &#9776;
           </button>
@@ -55,49 +76,56 @@ const Navbar = () => {
             ref={mobileMenuRef}
             className={`menu ${
               isOpen ? "flex" : "hidden"
-            } md:flex items-center justify-end flex-col md:flex-row w-full md:w-auto fixed top-20 right-0 sm:relative sm:top-0 bg-slate-700 md:bg-transparent`}
+            } md:flex items-center justify-end flex-col md:flex-row w-full md:w-auto fixed top-20 right-0 sm:relative sm:top-0 backdrop-blur-xl md:bg-transparent`}
             style={{ zIndex: 9 }}
           >
             <ul className="flex flex-col md:flex-row list-none w-full text-sm mt-1 md:mr-6">
-            <li>
-              <a
-                className={`flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[77px] hover:border-b-[1px] hover:border-gray-200`}
-                href="#"
-              >
-                Games <i className="fa-solid fa-users"></i>
-                <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
-              </a>
-            </li>
-            <li>
-              <a
-                className={`flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[77px] hover:border-b-[1px] hover:border-gray-200`}
-                href="#"
-              >
-                Products <i className="fa-solid fa-plus"></i>
-                <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
-              </a>
-            </li>
-            <li>
-              <a
-                className={`flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[77px] hover:border-b-[1px] hover:border-gray-200`}
-                href="#"
-              >
-                Learn more <i className="fa-brands fa-discourse"></i>
-                <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
-              </a>
-            </li>
-            <li>
-              <a
-                className={`flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[77px] hover:border-b-[1px] hover:border-gray-200`}
-                href="#"
-              >
-                Contact us <i className="fa-brands fa-discourse"></i>
-              </a>
-            </li>
-          </ul>
-           <button className=" mt-3 ml-4 mb-3 md:mt-0 md:ml-0 md:mb-0 rounded-full bg-[#0b71bc] text-white px-10 py-4 mr-4">
-            Connect
-          </button>
+              <li>
+                <a
+                  onClick={() => setIsOpen(false)}
+                  className={` text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-5 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-gray-200`}
+                  href="#"
+                >
+                  Games <i className="fa-solid fa-users"></i>
+                  <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => setIsOpen(false)}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-gray-200`}
+                  href="#"
+                >
+                  Products <i className="fa-solid fa-plus"></i>
+                  <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => setIsOpen(false)}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className}h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-gray-200`}
+                  href="#"
+                >
+                  Learn more <i className="fa-brands fa-discourse"></i>
+                  <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => setIsOpen(false)}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-gray-200`}
+                  href="#"
+                >
+                  Contact us <i className="fa-brands fa-discourse"></i>
+                </a>
+              </li>
+            </ul>
+            <button
+              onClick={() => setIsOpen(false)}
+              className=" lg:mt-3 lg:ml-4 mb-10 lg:mb-3 mt-10 md:mt-0 md:ml-0 md:mb-0 rounded-full bg-[#0b71bc] text-white px-6 py-3 lg:px-10 lg:py-4 "
+            >
+              Connect
+            </button>
           </div>
         </div>
       </nav>
