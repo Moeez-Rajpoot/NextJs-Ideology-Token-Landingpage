@@ -1,6 +1,7 @@
 import Section1 from "@/components/Section1";
 import Section1bar from "@/components/Section1bar";
 import Section2 from "@/components/Section2";
+import Section3 from "@/components/Section3/section3";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Section1 />
       <Section1bar />
       <Section2 />
+      <Section3 />
 
 
       </main>
