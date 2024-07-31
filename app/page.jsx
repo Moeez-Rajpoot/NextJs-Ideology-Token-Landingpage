@@ -8,7 +8,7 @@ export default function Home() {
     <main className="overflow-hidden">
       <Section1 />
       <Section1bar />
-      {/* <Section2 /> */}
+      <Section2 />
 
 
       </main>
