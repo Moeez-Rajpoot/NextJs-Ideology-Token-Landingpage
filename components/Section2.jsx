@@ -36,7 +36,7 @@ export default function Section2() {
               x: [820, -500, 820],
             }}
             transition={{
-              duration: 10,
+              duration: 12,
               ease: "easeOut",
               repeat: Infinity,
               delay: 0.5,
@@ -99,7 +99,7 @@ export default function Section2() {
             </span>
           </div>
 
-          <button className="mt-16 rounded-full bg-[#0b70bc] text-white px-10 py-4 sm:mr-4">
+          <button className="mt-16 rounded-full bg-[#0b70bc] hover:bg-gradient-to-r from-[#0C71BC] to-[#0A25B1] text-white px-10 py-4 sm:mr-4">
             Explore
           </button>
         </div>

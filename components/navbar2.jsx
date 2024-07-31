@@ -1,38 +1,29 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Logo from "../public/assets/logo.svg";
-import { usePathname } from "next/navigation";
+import { Poppins } from "next/font/google";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronDown,
-  faBars,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
-import { Poppins } from "next/font/google";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Poppin = Poppins({
   weight: "400",
   subsets: ["latin"],
 });
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const userMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const hamburgerRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        hamburgerRef.current &&
-        hamburgerRef.current.contains(event.target)
-      ) {
+      if (hamburgerRef.current && hamburgerRef.current.contains(event.target)) {
         return;
       }
       if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
-        setIsUserMenuOpen(false);
         setIsOpen(false);
       }
       if (
@@ -40,7 +31,6 @@ const Navbar = () => {
         !mobileMenuRef.current.contains(event.target)
       ) {
         setIsOpen(false);
-        setIsUserMenuOpen(false);
       }
     };
 
@@ -66,7 +56,9 @@ const Navbar = () => {
         <div className="flex items-center ">
           <button
             ref={hamburgerRef}
-            onClick={() => {setIsOpen(!isOpen)}}
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
             className="hamburger block md:hidden px-3 py-2 rounded text-white z-40"
             aria-label="Toggle menu"
           >
@@ -122,7 +114,8 @@ const Navbar = () => {
             </ul>
             <button
               onClick={() => setIsOpen(false)}
-              className=" lg:mt-3 lg:ml-4 mb-10 lg:mr-5 lg:mb-3 mt-10 md:mt-0 md:ml-0 md:mb-0 rounded-full bg-[#0b71bc] text-white px-6 py-3 lg:px-10 lg:py-4 "
+              className={` ${Poppin.className} text-sm lg:mt-3 lg:ml-2 mb-10 lg:mr-5 lg:mb-3 mt-10 md:mt-0 md:ml-0 md:mb-0 rounded-full bg-[#0b71bc]
+              hover:bg-gradient-to-r from-[#0C71BC] to-[#0A25B1] text-white px-6 py-3 lg:px-10 lg:py-4`}
             >
               Connect
             </button>

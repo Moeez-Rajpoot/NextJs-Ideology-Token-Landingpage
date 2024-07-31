@@ -15,7 +15,7 @@ export default function Section1bar() {
           x: [500 , -400  , 500],
         }}
         transition={{
-          duration: 10,
+          duration: 12,
           ease: "easeOut",
           repeat: Infinity,
           delay: 0.5,

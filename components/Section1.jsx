@@ -12,7 +12,7 @@ export default function Section1() {
           Empowering The Future <br /> With Blockchain
         </h1>
 
-        <button className="mt-16 rounded-full bg-[#0b71bc] text-white px-10 py-4 sm:mr-4">
+        <button className="mt-16 rounded-full bg-[#0b71bc] hover:bg-gradient-to-r from-[#0C71BC] to-[#0A25B1] text-white px-10 py-4 sm:mr-4">
           Explore
         </button>
 

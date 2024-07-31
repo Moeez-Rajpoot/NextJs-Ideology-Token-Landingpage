@@ -103,7 +103,7 @@ export default function Section4() {
 
             <div>
               <button
-                className={`mt-5 text-sm ${poppins.className} mb-5 lg:mb-0  rounded-full bg-[#0b70bc] text-white px-10 py-4 `}
+                className={`mt-5 text-sm ${poppins.className} mb-5 lg:mb-0  rounded-full bg-[#0b70bc] hover:bg-gradient-to-r from-[#0C71BC] to-[#0A25B1] text-white px-10 py-4 `}
               >
                 Start Staking
               </button>
