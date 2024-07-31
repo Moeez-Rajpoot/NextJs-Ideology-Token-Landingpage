@@ -122,7 +122,7 @@ const Navbar = () => {
             </ul>
             <button
               onClick={() => setIsOpen(false)}
-              className=" lg:mt-3 lg:ml-4 mb-10 lg:mb-3 mt-10 md:mt-0 md:ml-0 md:mb-0 rounded-full bg-[#0b71bc] text-white px-6 py-3 lg:px-10 lg:py-4 "
+              className=" lg:mt-3 lg:ml-4 mb-10 lg:mr-5 lg:mb-3 mt-10 md:mt-0 md:ml-0 md:mb-0 rounded-full bg-[#0b71bc] text-white px-6 py-3 lg:px-10 lg:py-4 "
             >
               Connect
             </button>
