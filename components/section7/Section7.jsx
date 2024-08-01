@@ -56,7 +56,7 @@ export default function Section7() {
             <div className=" w-[80%] mt-3 min-h-36 ml-8 flex gap-5">
               <motion.div
                 animate={{
-                  scale: [0.9, 1.2, 0.9],
+                  scale: [0.9, 1.1, 0.9],
                   transition: {
                     repeat: Infinity,
                     duration: 2,
@@ -92,7 +92,7 @@ export default function Section7() {
             <div className="w-[80%] min-h-40 ml-8 flex gap-5">
             <motion.div
                 animate={{
-                  scale: [0.9, 1.2, 0.9],
+                  scale: [0.9, 1.1, 0.9],
                   transition: {
                     repeat: Infinity,
                     duration: 2,
@@ -133,7 +133,7 @@ export default function Section7() {
             <div className=" w-[80%] min-h-40 ml-8 flex gap-5">
             <motion.div
                 animate={{
-                  scale: [0.9, 1.2, 0.9],
+                  scale: [0.9, 1.1, 0.9],
                   transition: {
                     repeat: Infinity,
                     duration: 2,
@@ -174,7 +174,7 @@ export default function Section7() {
             <div className=" w-[80%] min-h-40 ml-8 flex gap-5">
             <motion.div
                 animate={{
-                  scale: [0.9, 1.2, 0.9],
+                  scale: [0.9, 1.1, 0.9],
                   transition: {
                     repeat: Infinity,
                     duration: 2,
