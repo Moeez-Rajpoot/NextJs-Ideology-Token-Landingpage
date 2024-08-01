@@ -79,7 +79,7 @@ export default function Section5() {
             )}
           </div>
 
-{/* Card 2 */}
+          {/* Card 2 */}
           <div
             onMouseEnter={() => {
               setCard2(true);
@@ -115,7 +115,7 @@ export default function Section5() {
             )}
           </div>
 
-{/* Card 3 */}
+          {/* Card 3 */}
           <div
             onMouseEnter={() => {
               setCard3(true);
@@ -149,7 +149,7 @@ export default function Section5() {
               </h3>
             )}
           </div>
-
+          {/* Card 4 */}
           <div
             onMouseEnter={() => {
               setCard4(true);
