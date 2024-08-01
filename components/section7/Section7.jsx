@@ -21,7 +21,7 @@ export default function Section7() {
           alt="Gif"
         />
       </div>
-      <div className="w-screen h-fit flex flex-col items-center z-10 relative">
+      <div className="w-screen h-fit flex flex-col pt-10 lg:mt-0 items-center z-10 relative">
         <p
           className={`w-full text-[#829fe1] lg:mt-14 text-md sm:text-xl text-center ${lato.className}`}
         >
@@ -33,8 +33,8 @@ export default function Section7() {
           Features
         </h2>
       </div>
-      <div className=" w-full flex h-full z-10 relative">
-        <div id="left" className=" w-[40%]">
+      <div className=" w-full flex flex-col lg:flex-row h-full z-10 relative">
+        <div id="left" className=" hidden lg:block w-[40%]">
           <div id="image" className="mt-60 h-72 ml-48 w-72">
             <Image src={icons} alt="icons"></Image>
           </div>
@@ -42,25 +42,25 @@ export default function Section7() {
             <Image className="h-24 w-64" src={bgLogo} alt="bgLogo" />
           </div>
 
-          <p className="absolute left-[31%] top-[40%] tracking-widest text-[#162c60] ">
+          <p className="absolute hidden lg:block left-[31%] top-[40%] tracking-widest text-[#162c60] ">
             ---------------------------
           </p>
         </div>
 
-        <div id="right" className=" w-[60%]">
-          <div className="absolute left-[50%] top-[22%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
-          <div className="absolute left-[50%] bottom-[38%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
+        <div id="right" className=" w-full lg:w-[60%]">
+          <div className="absolute hidden lg:block left-[50%] top-[22%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
+          <div className="absolute hidden lg:block left-[50%] bottom-[38%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
 
-          <div className=" flex flex-col gap-[100px] overflow-y-scroll hide-scrollbar ml-20 mt-10 w-[60%] h-[75%]">
+          <div className=" flex flex-col gap-[50px] lg:gap-[100px] overflow-y-scroll hide-scrollbar lg:ml-20 mt-10 w-full lg:w-[60%] h-fit lg:h-[75%]">
             {/* Card 1 */}
-            <div className=" w-[80%] mt-3 min-h-36 ml-8 flex gap-5">
+            <div className=" w-[80%] mt-3 min-h-36 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
               <motion.div
                 animate={{
                   scale: [0.9, 1.1, 0.9],
                   transition: {
                     repeat: Infinity,
                     duration: 2,
-                    delay: 2, 
+                    delay: 2,
                   },
                 }}
                 id="icon"
@@ -69,7 +69,7 @@ export default function Section7() {
                 <Image src={Animation} alt="icons" className="h-20 w-20 z-20" />
               </motion.div>
 
-              <div className="border-l-8 w-[70%] px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
+              <div className="border-l-8 border-r-8 lg:border-r-0  w-full lg:w-[70%] px-10 py-5 lg:py-0 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
                 <h2
                   className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
                 >
@@ -89,14 +89,14 @@ export default function Section7() {
             </div>
 
             {/* Card 2 */}
-            <div className="w-[80%] min-h-40 ml-8 flex gap-5">
-            <motion.div
+            <div className="w-[80%] min-h-40 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
+              <motion.div
                 animate={{
                   scale: [0.9, 1.1, 0.9],
                   transition: {
                     repeat: Infinity,
                     duration: 2,
-                    delay: 2, 
+                    delay: 2,
                   },
                 }}
                 id="icon"
@@ -105,7 +105,7 @@ export default function Section7() {
                 <Image src={Animation} alt="icons" className="h-20 w-20 z-20" />
               </motion.div>
 
-              <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
+              <div className="border-l-8 border-r-8 lg:border-r-0 w-full lg:w-[70%] px-10 py-5 lg:py-0 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
                 <h2
                   className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
                 >
@@ -130,14 +130,14 @@ export default function Section7() {
             </div>
 
             {/* Card 3 */}
-            <div className=" w-[80%] min-h-40 ml-8 flex gap-5">
-            <motion.div
+            <div className=" w-[80%] min-h-40 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
+              <motion.div
                 animate={{
                   scale: [0.9, 1.1, 0.9],
                   transition: {
                     repeat: Infinity,
                     duration: 2,
-                    delay: 2, 
+                    delay: 2,
                   },
                 }}
                 id="icon"
@@ -146,7 +146,7 @@ export default function Section7() {
                 <Image src={Animation} alt="icons" className="h-20 w-20 z-20" />
               </motion.div>
 
-              <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
+              <div className="border-l-8 border-r-8 lg:border-r-0 w-full lg:w-[70%] px-10 py-5 lg:py-0 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
                 <h2
                   className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
                 >
@@ -171,14 +171,14 @@ export default function Section7() {
             </div>
 
             {/* Card 4 */}
-            <div className=" w-[80%] min-h-40 ml-8 flex gap-5">
-            <motion.div
+            <div className=" w-[80%] mb-10 lg:mb-0 min-h-40 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
+              <motion.div
                 animate={{
                   scale: [0.9, 1.1, 0.9],
                   transition: {
                     repeat: Infinity,
                     duration: 2,
-                    delay: 2, 
+                    delay: 2,
                   },
                 }}
                 id="icon"
@@ -187,7 +187,7 @@ export default function Section7() {
                 <Image src={Animation} alt="icons" className="h-20 w-20 z-20" />
               </motion.div>
 
-              <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
+              <div className="border-l-8 border-r-8 lg:border-r-0 w-full lg:w-[70%] px-10 py-5 lg:py-0 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
                 <h2
                   className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
                 >
