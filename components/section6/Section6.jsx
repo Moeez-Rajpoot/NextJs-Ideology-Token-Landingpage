@@ -8,7 +8,7 @@ import done from "../../public/assets/done.svg";
 
 export default function Section6() {
   return (
-    <div className="h-fit lg:h-screen w-full bg-[#01091c] relative">
+    <div className="h-fit lg:h-screen w-full bg-[#01091c]  relative">
       <div className="w-screen h-fit pt-5 lg:pt-14 flex flex-col items-center">
         <p
           className={`w-full text-[#829fe1] text-md sm:text-xl text-center ${lato.className}`}
