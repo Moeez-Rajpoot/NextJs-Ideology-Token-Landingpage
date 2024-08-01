@@ -16,7 +16,7 @@ export default function Section6() {
           IDEOLOGY
         </p>
         <h2
-          className={`text-center text-nowrap text-[#829fe1] text-md sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className}`}
+          className={`text-center text-nowrap z-10 text-[#829fe1] text-md sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className}`}
         >
           IDEA Network 3.0
         </h2>
@@ -155,7 +155,7 @@ export default function Section6() {
       </div>
 
       <button
-        className={`mt-10 lg:mt-4 text-sm ${poppins.className} flex mx-auto mb-5 lg:mb-0  rounded-full bg-[#0b70bc] hover:bg-gradient-to-r from-[#0C71BC] to-[#0A25B1] text-white px-10 py-4 `}
+        className={` z-10 relative mt-10 lg:mt-4 text-sm ${poppins.className} flex mx-auto mb-5 lg:mb-0  rounded-full bg-[#0b70bc] hover:bg-gradient-to-r from-[#0C71BC] to-[#0A25B1] text-white px-10 py-4 `}
       >
         Explore more
       </button>
