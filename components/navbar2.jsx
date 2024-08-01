@@ -75,7 +75,7 @@ const Navbar = () => {
               <li>
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={` text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-5 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-gray-200`}
+                  className={` text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-5 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
                   Games <i className="fa-solid fa-users"></i>
@@ -85,7 +85,7 @@ const Navbar = () => {
               <li>
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-gray-200`}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
                   Products <i className="fa-solid fa-plus"></i>
@@ -95,7 +95,7 @@ const Navbar = () => {
               <li>
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className}h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-gray-200`}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className}h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
                   Learn more <i className="fa-brands fa-discourse"></i>
@@ -105,7 +105,7 @@ const Navbar = () => {
               <li>
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-gray-200`}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
                   Contact us <i className="fa-brands fa-discourse"></i>
