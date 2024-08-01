@@ -7,10 +7,11 @@ import Image from "next/image";
 import Gif from "../../public/assets/movingback.gif";
 import icons from "../../public/assets/icons.svg";
 import bgLogo from "../../public/assets/bgLogo.svg";
+import Animation from "../../public/assets/Animation.svg";
 
 export default function Section7() {
   return (
-    <div className="h-fit lg:h-[120vh] relative">
+    <div className="h-fit lg:h-[130vh] relative">
       <div className="absolute w-full h-full top-0 left-0 z-0 outline-none border-none">
         <Image
           className="object-top w-full h-full blur-md"
@@ -39,22 +40,141 @@ export default function Section7() {
             <Image className="h-24 w-64" src={bgLogo} alt="bgLogo" />
           </div>
 
-          <p className="absolute left-[31%] top-[43%] tracking-widest text-[#162c60] ">
+          <p className="absolute left-[31%] top-[40%] tracking-widest text-[#162c60] ">
             ---------------------------
           </p>
         </div>
 
-        <div id="right" className=" bg-gray-700 w-[60%]">
-          <div className="absolute left-[50%] top-[24%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
-          <div className="absolute left-[50%] bottom-[36%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
+        <div id="right" className=" w-[60%]">
+          <div className="absolute left-[50%] top-[22%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
+          <div className="absolute left-[50%] bottom-[38%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
 
-          <div className="bg-yellow-400 ml-20 w-[60%] h-full">
+          <div className=" flex flex-col gap-[100px] overflow-y-scroll hide-scrollbar ml-20 mt-10 w-[60%] h-[75%]">
             {/* Card 1 */}
-            <div>
-              
+            <div className=" w-[80%] mt-3 min-h-36 ml-8 flex gap-5">
+              <div id="icon" className="flex justify-center items-center">
+                <Image
+                  src={Animation}
+                  alt="icons"
+                  className="h-20 w-20 z-20"
+                ></Image>
+              </div>
 
+              <div className="border-l-8 w-[70%] px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
+                <h2
+                  className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
+                >
+                  Q1
+                </h2>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm mt-2 ml-2`}
+                >
+                  WorkAsPro
+                </li>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm ml-2`}
+                >
+                  Stacking
+                </li>
+              </div>
+            </div>
 
+            {/* Card 2 */}
+            <div className="w-[80%] min-h-40 ml-8 flex gap-5">
+              <div id="icon" className="flex justify-center items-center">
+                <Image
+                  src={Animation}
+                  alt="icons"
+                  className="h-20 w-20 z-10"
+                ></Image>
+              </div>
 
+              <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
+                <h2
+                  className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
+                >
+                  Q2
+                </h2>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm mt-2 ml-2`}
+                >
+                  Manialands
+                </li>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm ml-2`}
+                >
+                  IDO Wallets
+                </li>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm ml-2`}
+                >
+                  IDEA Network
+                </li>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className=" w-[80%] min-h-40 ml-8 flex gap-5">
+              <div id="icon" className="flex justify-center items-center">
+                <Image
+                  src={Animation}
+                  alt="icons"
+                  className="h-20 w-20 z-10"
+                ></Image>
+              </div>
+
+              <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
+                <h2
+                  className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
+                >
+                  Q3
+                </h2>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm mt-2 ml-2`}
+                >
+                  NFT Staking Platform
+                </li>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm ml-2`}
+                >
+                  Play to Earn Mobile Game
+                </li>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm ml-2`}
+                >
+                  IDEA GPT
+                </li>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className=" w-[80%] min-h-40 ml-8 flex gap-5">
+              <div id="icon" className="flex justify-center items-center">
+                <Image
+                  src={Animation}
+                  alt="icons"
+                  className="h-20 w-20 z-10"
+                ></Image>
+              </div>
+
+              <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
+                <h2
+                  className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
+                >
+                  Q2
+                </h2>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm mt-2 ml-2`}
+                >
+                  Trust Spotr
+                </li>
+                <li
+                  className={`${poppins.className} text-[#829fe1] text-sm ml-2`}
+                >
+                  Real 8 Ball Pool
+                </li>
+             
+              </div>
             </div>
           </div>
         </div>
