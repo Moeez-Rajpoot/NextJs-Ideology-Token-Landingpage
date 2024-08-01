@@ -1,7 +1,9 @@
+"use client";
 import { Lato, Space_Grotesk, Poppins } from "next/font/google";
 const lato = Lato({ weight: "300", subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 const poppins = Poppins({ weight: "300", subsets: ["latin"] });
+import { motion } from "framer-motion";
 
 import Image from "next/image";
 import Gif from "../../public/assets/movingback.gif";
@@ -52,13 +54,20 @@ export default function Section7() {
           <div className=" flex flex-col gap-[100px] overflow-y-scroll hide-scrollbar ml-20 mt-10 w-[60%] h-[75%]">
             {/* Card 1 */}
             <div className=" w-[80%] mt-3 min-h-36 ml-8 flex gap-5">
-              <div id="icon" className="flex justify-center items-center">
-                <Image
-                  src={Animation}
-                  alt="icons"
-                  className="h-20 w-20 z-20"
-                ></Image>
-              </div>
+              <motion.div
+                animate={{
+                  scale: [0.9, 1.2, 0.9],
+                  transition: {
+                    repeat: Infinity,
+                    duration: 2,
+                    delay: 2, 
+                  },
+                }}
+                id="icon"
+                className="flex justify-center items-center"
+              >
+                <Image src={Animation} alt="icons" className="h-20 w-20 z-20" />
+              </motion.div>
 
               <div className="border-l-8 w-[70%] px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
                 <h2
@@ -81,13 +90,20 @@ export default function Section7() {
 
             {/* Card 2 */}
             <div className="w-[80%] min-h-40 ml-8 flex gap-5">
-              <div id="icon" className="flex justify-center items-center">
-                <Image
-                  src={Animation}
-                  alt="icons"
-                  className="h-20 w-20 z-10"
-                ></Image>
-              </div>
+            <motion.div
+                animate={{
+                  scale: [0.9, 1.2, 0.9],
+                  transition: {
+                    repeat: Infinity,
+                    duration: 2,
+                    delay: 2, 
+                  },
+                }}
+                id="icon"
+                className="flex justify-center items-center"
+              >
+                <Image src={Animation} alt="icons" className="h-20 w-20 z-20" />
+              </motion.div>
 
               <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
                 <h2
@@ -115,13 +131,20 @@ export default function Section7() {
 
             {/* Card 3 */}
             <div className=" w-[80%] min-h-40 ml-8 flex gap-5">
-              <div id="icon" className="flex justify-center items-center">
-                <Image
-                  src={Animation}
-                  alt="icons"
-                  className="h-20 w-20 z-10"
-                ></Image>
-              </div>
+            <motion.div
+                animate={{
+                  scale: [0.9, 1.2, 0.9],
+                  transition: {
+                    repeat: Infinity,
+                    duration: 2,
+                    delay: 2, 
+                  },
+                }}
+                id="icon"
+                className="flex justify-center items-center"
+              >
+                <Image src={Animation} alt="icons" className="h-20 w-20 z-20" />
+              </motion.div>
 
               <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
                 <h2
@@ -149,13 +172,20 @@ export default function Section7() {
 
             {/* Card 4 */}
             <div className=" w-[80%] min-h-40 ml-8 flex gap-5">
-              <div id="icon" className="flex justify-center items-center">
-                <Image
-                  src={Animation}
-                  alt="icons"
-                  className="h-20 w-20 z-10"
-                ></Image>
-              </div>
+            <motion.div
+                animate={{
+                  scale: [0.9, 1.2, 0.9],
+                  transition: {
+                    repeat: Infinity,
+                    duration: 2,
+                    delay: 2, 
+                  },
+                }}
+                id="icon"
+                className="flex justify-center items-center"
+              >
+                <Image src={Animation} alt="icons" className="h-20 w-20 z-20" />
+              </motion.div>
 
               <div className="border-l-8 w-[70%]  px-10 h-full border-[#93aefd] backdrop-blur-xl rounded-3xl">
                 <h2
@@ -173,7 +203,6 @@ export default function Section7() {
                 >
                   Real 8 Ball Pool
                 </li>
-             
               </div>
             </div>
           </div>
