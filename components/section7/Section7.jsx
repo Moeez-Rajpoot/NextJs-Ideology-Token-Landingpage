@@ -13,7 +13,7 @@ import Animation from "../../public/assets/Animation.svg";
 
 export default function Section7() {
   return (
-    <div className="h-fit lg:h-[130vh] relative">
+    <div className="h-fit lg:h-[130vh] pb-10 relative">
       <div className="absolute w-full h-full top-0 left-0 z-0 outline-none border-none">
         <Image
           className="object-top w-full h-full blur-md"
@@ -51,7 +51,7 @@ export default function Section7() {
           <div className="absolute hidden lg:block left-[50%] top-[22%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
           <div className="absolute hidden lg:block left-[50%] bottom-[38%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
 
-          <div className=" flex flex-col gap-[50px] lg:gap-[100px] overflow-y-scroll hide-scrollbar lg:ml-20 mt-10 w-full lg:w-[60%] h-fit lg:h-[75%]">
+          <div className=" flex flex-col gap-[50px] lg:gap-[90px] overflow-y-scroll hide-scrollbar lg:ml-20 mt-10 w-full lg:w-[60%] h-fit lg:h-[75%]">
             {/* Card 1 */}
             <div className=" w-[80%] mt-3 min-h-36 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
               <motion.div

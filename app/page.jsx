@@ -6,6 +6,7 @@ import Section4 from "@/components/section4/Section4";
 import Section5 from "@/components/section5/Section5";
 import Section6 from "@/components/section6/Section6";
 import Section7 from "@/components/section7/Section7";
+import Section8 from "@/components/section8/Section8";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Section5 />
       <Section6 />
       <Section7 />
+      <Section8 />
 
 
       </main>
