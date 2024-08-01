@@ -5,16 +5,17 @@ const poppins = Poppins({ weight: "300", subsets: ["latin"] });
 
 import Image from "next/image";
 import Gif from "../../public/assets/movingback.gif";
+import icons from "../../public/assets/icons.svg";
+import bgLogo from "../../public/assets/bgLogo.svg";
 
 export default function Section7() {
   return (
     <div className="h-fit lg:h-[120vh] relative">
       <div className="absolute w-full h-full top-0 left-0 z-0 outline-none border-none">
-        <Image 
+        <Image
           className="object-top w-full h-full blur-md"
-          src={Gif} 
+          src={Gif}
           alt="Gif"
-          
         />
       </div>
       <div className="w-screen h-fit flex flex-col items-center z-10 relative">
@@ -28,6 +29,35 @@ export default function Section7() {
         >
           Features
         </h2>
+      </div>
+      <div className=" w-full flex h-full z-10 relative">
+        <div id="left" className=" w-[40%]">
+          <div id="image" className="mt-60 h-72 ml-48 w-72">
+            <Image src={icons} alt="icons"></Image>
+          </div>
+          <div className="absolute h-fit left-[20%] top-[48%] rounded-full border-none outline-none  backdrop-blur-md">
+            <Image className="h-24 w-64" src={bgLogo} alt="bgLogo" />
+          </div>
+
+          <p className="absolute left-[31%] top-[43%] tracking-widest text-[#162c60] ">
+            ---------------------------
+          </p>
+        </div>
+
+        <div id="right" className=" bg-gray-700 w-[60%]">
+          <div className="absolute left-[50%] top-[24%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
+          <div className="absolute left-[50%] bottom-[36%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
+
+          <div className="bg-yellow-400 ml-20 w-[60%] h-full">
+            {/* Card 1 */}
+            <div>
+              
+
+
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
