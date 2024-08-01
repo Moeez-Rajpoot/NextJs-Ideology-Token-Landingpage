@@ -22,8 +22,14 @@ export default function Section6() {
         </h2>
       </div>
 
+
+
       <div className="absolute h-[300px] top-20 -left-14 blur-sm">
         <Image src={ball} alt="Vector ball" className="h-full w-full" />
+      </div>
+
+      <div className="absolute top-20 bg-[#01091c] blur-md h-[97vh] w-screen">
+       
       </div>
 
       <div className="grid grid-cols-1 text-center lg:text-left lg:grid-cols-2 filter-none  w-[80%] mx-auto h-[57%] z-10 relative">
