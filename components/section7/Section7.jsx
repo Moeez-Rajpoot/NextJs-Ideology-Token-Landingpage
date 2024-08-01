@@ -161,7 +161,7 @@ export default function Section7() {
                 <h2
                   className={`${spaceGrotesk.className} text-4xl text-[#829fe1] font-bold ml-1 mt-7`}
                 >
-                  Q2
+                  Q4
                 </h2>
                 <li
                   className={`${poppins.className} text-[#829fe1] text-sm mt-2 ml-2`}
