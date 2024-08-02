@@ -1,5 +1,8 @@
 import Logo from "../../public/assets/logo.svg";
 import footer from "../../public/assets/footer.svg";
+import facebook from "../../public/assets/facebook.svg";
+import instagram from "../../public/assets/instagram.svg";
+import youtube from "../../public/assets/youtube.svg";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 
@@ -7,8 +10,8 @@ const poppins = Poppins({ weight: "500", subsets: ["latin"] });
 const poppinlight = Poppins({ weight: "300", subsets: ["latin"] });
 export default function Footer() {
   return (
-    <div className="h-[75vh] w-full bg-[#000717] flex flex-col justify-center items-center">
-      <div className="w-[60%] flex  -mt-10 mr-5 h-72">
+    <div className="h-[85vh] w-full bg-[#000717] flex flex-col  items-center">
+      <div className="w-[60%] flex  mt-28 mr-5 h-72">
         {/* text div */}
         <div className="w-1/3 flex justify-center ">
           <Image src={Logo} alt="logo" className="h-12 w-36"></Image>
@@ -44,12 +47,35 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-b-[1px] w-[90%] opacity-5 border-white">
-        {" "}
+      <div className="border-b-[1px] w-[90%] h-fit opacity-5  border-white">
+  
         {/* border div */}
       </div>
 
-      <div> {/* icons div */}</div>
+      <div className=" flex flex-col items-center w-full mt-5 h-40">
+     
+        {/* icons div */}
+        <div className="flex h-fit w-[20%] justify-center gap-10 ">
+          <Image
+            className="h-8 w-8  mt-12 "
+            src={instagram}
+            alt="logo"
+          ></Image>
+
+          <Image
+            className="h-8 w-8  mt-12 "
+            src={youtube}
+            alt="logo"
+          ></Image>
+
+          <Image
+            className="h-8 w-8  mt-12 "
+            src={facebook}
+            alt="logo"
+          ></Image>
+        </div>
+        <p className={`${poppinlight.className} text-sm mt-8 text-[#7F9ED0]`}> COPYRIGHT © 2024 • IDEAOLOGY     </p>
+      </div>
     </div>
   );
 }
