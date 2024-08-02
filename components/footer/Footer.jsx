@@ -40,7 +40,7 @@ export default function Footer() {
             Mainlads
           </p>
           <p
-            className={`mt-4 w-fit lg:-ml-[18%] text-sm ${poppinlight.className}  text-[#879cce] hover:border-b-[1px] hover:border-[#7a91c5] cursor-default  `}
+            className={`mt-4 w-fit lg:-ml-[18%] text-sm ${poppinlight.className}  text-[#879cce] hover:border-b-[1px] hover:border-[#7a91c5] cursor-default`}
           >
             Work as Pro
           </p>
@@ -48,33 +48,22 @@ export default function Footer() {
       </div>
 
       <div className="border-b-[1px] w-[90%] h-fit opacity-5  border-white">
-  
         {/* border div */}
       </div>
 
       <div className=" flex flex-col items-center w-full mt-5 h-40">
-     
         {/* icons div */}
         <div className="flex h-fit w-[20%] justify-center gap-10 ">
-          <Image
-            className="h-8 w-8  mt-12 "
-            src={instagram}
-            alt="logo"
-          ></Image>
+          <Image className="h-8 w-8  mt-12 " src={instagram} alt="logo"></Image>
 
-          <Image
-            className="h-8 w-8  mt-12 "
-            src={youtube}
-            alt="logo"
-          ></Image>
+          <Image className="h-8 w-8  mt-12 " src={youtube} alt="logo"></Image>
 
-          <Image
-            className="h-8 w-8  mt-12 "
-            src={facebook}
-            alt="logo"
-          ></Image>
+          <Image className="h-8 w-8  mt-12 " src={facebook} alt="logo"></Image>
         </div>
-        <p className={`${poppinlight.className} text-sm mt-8 text-[#7F9ED0]`}> COPYRIGHT © 2024 • IDEAOLOGY     </p>
+        <p className={`${poppinlight.className} text-sm mt-8 text-[#7F9ED0]`}>
+          {" "}
+          COPYRIGHT © 2024 • IDEAOLOGY{" "}
+        </p>
       </div>
     </div>
   );

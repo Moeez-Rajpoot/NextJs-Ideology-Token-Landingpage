@@ -11,9 +11,10 @@ const Poppin = Poppins({
   subsets: ["latin"],
 });
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null);
+  // const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const userMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const hamburgerRef = useRef(null);
@@ -40,13 +41,12 @@ const Navbar = () => {
     };
   }, []);
 
-  const handleMouseEnter = (menu) => {
-    setDropdownOpen(menu);
-  };
 
-  const handleMouseLeave = () => {
-    setDropdownOpen(null);
-  };
+  // const handleUserMenu = (option) => {
+  //   setIsUserMenuOpen(option);
+  // }
+
+
 
   return (
     <>
@@ -80,100 +80,59 @@ const Navbar = () => {
             style={{ zIndex: 9 }}
           >
             <ul className="flex flex-col md:flex-row list-none w-full text-sm mt-1 md:mr-6">
-              <li
-                onMouseEnter={() => handleMouseEnter("games")}
-                onMouseLeave={handleMouseLeave}
-                className="relative"
-                style={{ boxShadow: 'none' }}
+              <li 
+              // onClick={() => handleUserMenu("games")}
+              // onMouseOut={() => setIsUserMenuOpen(false)}
               >
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={` text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-5 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-[#0b71bc]`}
+                  className={` text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-5 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
                   Games <i className="fa-solid fa-users"></i>
                   <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
                 </a>
-                {dropdownOpen === "games" && (
-                  <div className="absolute top-full left-0 border-y-2 border-[#0b71bc] border-opacity-50 rounded-md mt-[2px]">
-                    <ul className="py-2" style={{ boxShadow: 'none' }}>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
+              </li>
+              {/* {isUserMenuOpen === "games" && (
+                  <div className="absolute top-full left-0 border-y-2 border-[#0b71bc] border-opacity-50  rounded-md ">
+                    <ul className="py-2">
+                      <li className="px-4 py-2 text-nowrap hover:border-b-[1px] hover:border-white hover:border-opacity-25">
                         Car Games
                       </li>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
+                      <li className="px-4 py-2 text-nowrap hover:border-b-[1px] hover:border-white hover:border-opacity-25">
                         Shooting Games
                       </li>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
+                      <li className="px-4 py-2 text-nowrap hover:border-b-[1px] hover:border-white hover:border-opacity-25">
                         Bike Games
                       </li>
                     </ul>
                   </div>
-                )}
-              </li>
-              <li
-                onMouseEnter={() => handleMouseEnter("products")}
-                onMouseLeave={handleMouseLeave}
-                className="relative"
-                style={{ boxShadow: 'none' }}
-              >
+                )} */}
+
+              <li>
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-[#0b71bc]`}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
                   Products <i className="fa-solid fa-plus"></i>
                   <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
                 </a>
-                {dropdownOpen === "products" && (
-                  <div className="absolute top-full left-0 border-y-2 border-[#0b71bc] border-opacity-50 rounded-md mt-[2px]">
-                    <ul className="py-2" style={{ boxShadow: 'none' }}>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
-                        NFT Products
-                      </li>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
-                        Games Products
-                      </li>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
-                        Technology Products
-                      </li>
-                    </ul>
-                  </div>
-                )}
               </li>
-              <li
-                onMouseEnter={() => handleMouseEnter("learnMore")}
-                onMouseLeave={handleMouseLeave}
-                className="relative"
-                style={{ boxShadow: 'none' }}
-              >
+              <li>
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-[#0b71bc]`}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className}h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
                   Learn more <i className="fa-brands fa-discourse"></i>
                   <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
                 </a>
-                {dropdownOpen === "learnMore" && (
-                  <div className="absolute top-full left-0 border-y-2 border-[#0b71bc] border-opacity-50 rounded-md mt-[2px]">
-                    <ul className="py-2" style={{ boxShadow: 'none' }}>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
-                        About Us
-                      </li>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
-                        Documentation
-                      </li>
-                      <li className="px-4 py-2 text-nowrap hover:bg-gray-200" style={{ boxShadow: 'none' }}>
-                        White Paper
-                      </li>
-                    </ul>
-                  </div>
-                )}
               </li>
-              <li className="relative" style={{ boxShadow: 'none' }}>
+              <li>
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] hover:border-b-[1px] hover:border-[#0b71bc]`}
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
                   Contact us <i className="fa-brands fa-discourse"></i>
