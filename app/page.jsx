@@ -14,7 +14,7 @@ import Section9 from "@/components/section9/Section9";
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      {/* <Section1 />
+      <Section1 />
       <Section1bar />
       <Section2 />
       <Section3 />
@@ -23,7 +23,7 @@ export default function Home() {
       <Section6 />
       <Section7 />
       <Section8 />
-      <Section9 /> */}
+      <Section9 />
       <Footer />
 
 

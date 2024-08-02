@@ -69,19 +69,19 @@ export default function Section4() {
 
             <div className={`${poppins.className} flex gap-10 text-sm`}>
               <option
-                className=" hover:border-b-[1px] hover:border-b-[#829fe1] hover:cursor-pointer pb-2 w-16"
+                className=" border-b-[1px] border-transparent hover:border-b-[1px] hover:border-b-[#829fe1] hover:cursor-pointer pb-2 w-16"
                 value="30"
               >
                 30 Days
               </option>
               <option
-                className="hover:border-b-[1px] hover:border-b-[#829fe1]  hover:cursor-pointer pb-2 w-16"
+                className="border-b-[1px] border-transparent hover:border-b-[1px] hover:border-b-[#829fe1]  hover:cursor-pointer pb-2 w-16"
                 value="30"
               >
                 90 Days
               </option>
               <option
-                className="hover:border-b-[1px] hover:border-b-[#829fe1]  hover:cursor-pointer pb-2 w-16"
+                className="border-b-[1px] border-transparent hover:border-b-[1px] hover:border-b-[#829fe1]  hover:cursor-pointer pb-2 w-16"
                 value="30"
               >
                 180 Days
