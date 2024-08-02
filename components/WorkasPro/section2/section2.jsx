@@ -30,7 +30,7 @@ export default function section2() {
           </h2>
 
           <p
-            className={`${poppins.className} text-sm pr-14 lg:pr-72 mt-6 w-full  lg:w-[70%] `}
+            className={`${poppins.className} text-sm pr-14 lg:pr-72 mt-6 w-full  lg:w-[70%] text-[#7F9ED0] `}
           >
             Setting up your wallet is the first step to unlocking the world of
             cryptocurrency. With just a few simple steps, you can securely
