@@ -36,7 +36,7 @@ export default function section2() {
             cryptocurrency. With just a few simple steps, you can securely
             store, send, and receive digital assets. Choose a reliable
             cryptocurrency wallet provider, create your account, and safeguard
-            your private keys. Whether you're new to the world of crypto or a
+            your private keys. Whether you re new to the world of crypto or a
             seasoned investor, setting up your wallet is quick, easy, and
             essential for participating in the future of finance.
           </p>
