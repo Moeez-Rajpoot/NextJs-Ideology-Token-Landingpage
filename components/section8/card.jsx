@@ -40,8 +40,8 @@ export default function card({ image, headtext, content }) {
         className="w-full h-[110px] lg:h-[150px] p-3 lg:p-7 rounded-br-lg rounded-bl-lg bg-[#01091c]"
       >
           <p
-          className={`text-xs lg:text-sm pt-1 ${poppinlight.className} ${
-            hover ? "text-[#7F9ED0]" : "text-[#6784B2]"
+          className={`text-xs lg:text-sm  mb-1 ${poppinlight.className} ${
+            hover ? "text-[#7292dd]" : "text-[#829FE2]"
           } `}
         >
           {content}

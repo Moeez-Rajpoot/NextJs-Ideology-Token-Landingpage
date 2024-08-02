@@ -9,8 +9,8 @@ const poppins = Poppins({ weight: "300", subsets: ["latin"] });
 export default function Section9() {
   const [input1, setInput1] = useState("Your email");
   return (
-    <div className="h-fit flex justify-center lg:h-[70vh] bg-white">
-      <div className="relative mt-28 w-[80%] rounded-tr-[2.5rem] rounded-tl-[2.5rem] bg-black h-80 overflow-hidden">
+    <div className="h-fit flex justify-center lg:h-[65vh] bg-[#020b1e]">
+      <div className="relative mt-28 w-[80%] rounded-tr-[2.5rem] rounded-tl-[2.5rem] bg-[#030e26] h-80 overflow-hidden">
         <div className="h-56 w-[53%] mt-9 ml-10">
           <h1
             className={`${spaceGrotesk.className} text-[#829FE2] text-[40px] font-semibold pl-4`}
