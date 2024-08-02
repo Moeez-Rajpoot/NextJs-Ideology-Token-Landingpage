@@ -26,7 +26,7 @@ export default function Section() {
         <div className="ml-10 lg:ml-20 h-[50%] pt-8 lg:pl-20   ">
           <h1 className={`${space_Grotesk.className} text-4xl lg:text-7xl font-bold text-[#BED1FE] `}>Workaspro</h1>
 
-          <p className={`${poppins.className} text-[#7F9ED0] mt-5 pr-5 lg:pr-28 text-sm mb-10 lg:mb-0 lg:text-lg`}>
+          <p className={`${poppins.className} text-[#7F9ED0] mt-5 pr-5 lg:pr-28 text-sm mb-10 lg:mb-0 lg:text-lg tracking-tight`}>
             The leading crypto marketplace on platform home to the next
             generation of digital creators.
           </p>

@@ -9,8 +9,11 @@ import Section6 from "@/components/section6/Section6";
 import Section7 from "@/components/section7/Section7";
 import Section8 from "@/components/section8/Section8";
 import Section9 from "@/components/section9/Section9";
+import Section from "@/components/WorkasPro/section1/Section1";
 
 import Section1W from "@/components/WorkasPro/section1/Section1";
+import Section2W from "@/components/WorkasPro/section2/section2";
+import Section3W from "@/components/WorkasPro/section3/Section3";
 
 
 export default function Home() {
@@ -19,6 +22,8 @@ export default function Home() {
 
        <Section1W /> 
       <Section1bar />
+      <Section2W />
+      <Section3W />
       {/* <Section2 /> */}
       {/* <Section3 /> */}
       {/* <Section4 /> */}
