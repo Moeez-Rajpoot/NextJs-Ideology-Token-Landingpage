@@ -20,7 +20,7 @@ export default function Section1bar() {
           repeat: Infinity,
           delay: 0.5,
         }}
-        className="text-white"
+        className="text-white font-light"
       >
         Quarter 2 Projects Ready for Launch | Manialands Promo Video Released |
         Ideaology CEO Live on Space | New Blockchain Integrations Announced |
