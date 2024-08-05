@@ -21,7 +21,7 @@ export default function Section2() {
         {" "}
         {/* Upper Section */}
         <div className=" w-screen lg:w-1/3 lg:ml-40 h-fit lg:h-60  flex flex-col lg:justify-center">
-          <p className={` w-full text-[#829fe1] text-md sm:text-xl mt-6 text-center sm:mt-20 sm:pl-4 ${lato.className}`}>
+          <p className={`  w-full text-[#829fe1] mt-10 lg:mt-0 text-md sm:text-xl text-center  md:pr-9 ${lato.className}`}>
             Powered by Crypto.com
           </p>
           <h2
@@ -41,7 +41,7 @@ export default function Section2() {
               repeat: Infinity,
               delay: 0.5,
             }}
-            className="h-1/2 w-full mt-8 md:mt-20 flex gap-14 items-center"
+            className="h-1/2 w-full mt-8 md:mt-5 flex gap-14 items-center"
           >
             <Image alt="Icons" src={gateio} height={150} width={150}></Image>
 

@@ -5,7 +5,7 @@ import project1 from "../../public/assets/product1.svg";
 import project2 from "../../public/assets/product2.svg";
 import project3 from "../../public/assets/product3.svg";
 import Card from "./card";
-export default function section3() {
+export default function section3({ head }) {
   return (
     <div className="h-fit lg:h-screen bg-[#01091c] w-full">
       <div className=" w-screen h-fit  flex flex-col items-center">
@@ -19,7 +19,7 @@ export default function section3() {
         <h2
           className={`text-center text-nowrap text-[#829fe1] text-md sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className} `}
         >
-          Latest Products
+          {head}
         </h2>
       </div>
 

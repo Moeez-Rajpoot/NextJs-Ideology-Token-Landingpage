@@ -13,6 +13,7 @@ import Section from "@/components/WorkasPro/section1/Section1";
 import Section1W from "@/components/WorkasPro/section1/Section1";
 import Section2W from "@/components/WorkasPro/section2/section2";
 import Section3W from "@/components/WorkasPro/section3/Section3";
+import Slider from "@/components/WorkasPro/Slider/slider"
 
 export default function Home() {
   return (
@@ -23,14 +24,15 @@ export default function Home() {
       <Section3W />
 
       {/* <Section2 /> */}
-      {/* <Section3 /> */}
+      <Section3 head="Realted Products" />
+      <Slider/>
       {/* <Section4 /> */}
       {/* <Section5 /> */}
       {/* <Section6 /> */}
       {/* <Section7 /> */}
       {/* <Section8 /> */}
-      {/* <Section9 /> */}
-      {/* <Footer /> */}
+      <Section9 />
+      <Footer />
     </main>
   );
 }

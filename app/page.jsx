@@ -17,7 +17,7 @@ export default function Home() {
       <Section1 />
       <Section1bar />
       <Section2 />
-      <Section3 />
+      <Section3 head="Latest Products" />
       <Section4 />
       <Section5 />
       <Section6 />
