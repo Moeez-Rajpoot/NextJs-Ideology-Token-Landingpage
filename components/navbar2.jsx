@@ -121,7 +121,7 @@ const Navbar = () => {
                 {dropdownStates.games && (
                   <div className="absolute top-full left-0 bg-[#0a72bc] lg:bg-[#0a72bc06] lg:backdrop-blur-lg text-white border-x-4 w-full h-52 lg:h-fit  lg:w-40 border-[#0a71bc] rounded-xl mt-1 z-10">
                     <ul className="py-2">
-                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer ">Car Games</li>
+                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer">Car Games</li>
                       <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer">Shooting Games</li>
                       <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer">Bike Games</li>
                     </ul>
