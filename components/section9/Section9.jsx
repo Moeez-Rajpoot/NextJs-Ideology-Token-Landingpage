@@ -13,12 +13,12 @@ export default function Section9() {
       <div className="relative  mt-5  lg:mt-28 w-[90%] lg:w-[80%] rounded-tr-[2.5rem] rounded-tl-[2.5rem] bg-[#030e26]  lg:h-80 overflow-hidden">
         <div className="h-fit lg:h-56 w-[53%] mt-9 mx-auto lg:ml-10">
           <h1
-            className={`${spaceGrotesk.className} text-[#829FE2] text-center xl:text-left xl:mt-16  text-2xl lg:text-[40px] font-semibold lg:pl-4`}
+            className={`${spaceGrotesk.className} text-[#829FE2] text-center lg:text-left xl:mt-16  text-2xl lg:text-[40px] font-semibold lg:pl-4`}
           >
             Get more updates
           </h1>
 
-          <p className={`${lato.className} text-[#93aff1] text-sm lg:text-xl text-center xl:text-left xl:mt-6 lg:pl-4 lg:pr-10`}>
+          <p className={`${lato.className} text-[#93aff1] text-sm lg:text-xl text-center lg:text-left lg:mt-6 lg:pl-4 lg:pr-10`}>
             Join our mailing list to stay in the loop with our newest feature
             releases, crypto staking, trips and tricks.
           </p>
@@ -31,7 +31,7 @@ export default function Section9() {
               onMouseLeave={() => {
                 setInput1("Your email");
               }}
-              className={` input-field text-sm md:ml-4 xl:ml-3  px-6  lg:-ml-1  mt-7 py-4 w-[170%] sm:w-[100%] lg:w-[67%] xl:w-[69%] rounded-lg border-none outline-none bg-[#0b172f] placeholder:text-[#829FE2] text-[#829FE2] ${poppins.className} `}
+              className={` input-field text-sm md:ml-4 xl:ml-3 lg:ml-4  px-6  mt-7 py-4 w-[170%] sm:w-[100%] lg:w-[67%] xl:w-[69%] rounded-lg border-none outline-none bg-[#0b172f] placeholder:text-[#829FE2] text-[#829FE2] ${poppins.className} `}
               type="text"
               placeholder={input1}
             />
