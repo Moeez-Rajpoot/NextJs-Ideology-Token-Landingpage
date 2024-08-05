@@ -11,7 +11,6 @@ const Poppin = Poppins({
   subsets: ["latin"],
 });
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   // const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -41,12 +40,9 @@ const Navbar = () => {
     };
   }, []);
 
-
   // const handleUserMenu = (option) => {
   //   setIsUserMenuOpen(option);
   // }
-
-
 
   return (
     <>
@@ -80,7 +76,7 @@ const Navbar = () => {
             style={{ zIndex: 9 }}
           >
             <ul className="flex flex-col md:flex-row list-none w-full text-sm mt-1 md:mr-6">
-              <li 
+              <li
               // onClick={() => handleUserMenu("games")}
               // onMouseOut={() => setIsUserMenuOpen(false)}
               >

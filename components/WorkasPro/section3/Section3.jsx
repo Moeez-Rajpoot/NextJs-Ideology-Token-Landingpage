@@ -4,17 +4,17 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 export default function Section3() {
   return (
-    <div className="h-screen bg-[#01091c] w-full">
-      <div className=" w-screen h-fit pt-[100px] pl-[150px]  flex flex-col items-start">
+    <div className="h-fit xl:h-screen bg-[#01091c] w-full">
+      <div className=" w-screen h-fit pt-10 pl-10 lg:pt-[100px] lg:pl-[150px]  flex flex-col items-start">
         {" "}
         {/* Upper Heading Section */}
         <p
-          className={` w-full text-[#829fe1] mt-10 lg:mt-0 text-md sm:text-xl  ${lato.className}`}
+          className={` w-full text-[#829fe1] mt-10 lg:mt-0 text-lg sm:text-xl  ${lato.className}`}
         >
           Powered by Crypto.com
         </p>
         <h2
-          className={`text-center text-nowrap text-[#829fe1] text-md sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className} `}
+          className={`text-center text-nowrap text-[#829fe1] text-lg sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className} `}
         >
           Introduction to WorkAsPro
         </h2>
@@ -30,7 +30,7 @@ export default function Section3() {
           WorkAsPro, read for some helpful tips.
         </p>
         <h3
-          className={`text-center text-nowrap text-[#829fe1] text-md sm:text-[28px] mt-4 font-semibold ${spaceGrotesk.className} `}
+          className={`text-center text-nowrap text-[#829fe1] text-lg sm:text-[28px] mt-4 font-semibold ${spaceGrotesk.className} `}
         >
           How to Join WorkAsPro
         </h3>
@@ -42,7 +42,7 @@ export default function Section3() {
           clients and products.
         </p>
         <h3
-          className={`text-center text-nowrap text-[#829fe1] text-md sm:text-[28px] mt-3 font-semibold ${spaceGrotesk.className} `}
+          className={`text-center text-nowrap text-[#829fe1] text-lg sm:text-[28px] mt-3 font-semibold ${spaceGrotesk.className} `}
         >
           Sign Up
         </h3>
@@ -65,7 +65,7 @@ export default function Section3() {
           Enter your User Name and password and click Join Us Now.
         </li>
         <h3
-          className={`text-center text-nowrap text-[#829fe1] text-md sm:text-[28px] mt-3 font-semibold ${spaceGrotesk.className} `}
+          className={`text-center text-nowrap text-[#829fe1] text-lg sm:text-[28px] mt-3 font-semibold ${spaceGrotesk.className} `}
         >
           Log in
         </h3>
@@ -82,7 +82,7 @@ export default function Section3() {
       </div>
       <div>
               <button
-                className={`mt-[35px] ml-[150px] text-sm ${poppins.className} mb-5 lg:mb-0  rounded-full bg-[#0b70bc] hover:bg-gradient-to-r from-[#0C71BC] to-[#0A25B1] text-white px-10 py-4 `}
+                className={`mt-[35px] xl:ml-[150px] flex mx-auto text-sm ${poppins.className} mb-5 lg:mb-0  rounded-full bg-[#0b70bc] hover:bg-gradient-to-r from-[#0C71BC] to-[#0A25B1] text-white px-10 py-4 `}
               >
                 Start Staking
               </button>
