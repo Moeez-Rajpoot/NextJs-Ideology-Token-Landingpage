@@ -23,8 +23,8 @@ export default function Home() {
       <Section6 />
       <Section7 />
       <Section8 />
-      <Section9 />
-      <Footer />
+      {/* <Section9 /> */}
+      {/* <Footer /> */}
 
 
       </main>

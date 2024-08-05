@@ -17,7 +17,7 @@ const poppinlight = Poppins({ weight: "400", subsets: ["latin"] });
 export default function Section2() {
   return (
     <div className="h-screen lg:h-[120vh] w-screen bg-[#01091c] relative">
-      <div className="flex flex-col md:flex-row items-center">
+      <div className="flex flex-col md:flex-row  items-center">
         {" "}
         {/* Upper Section */}
         <div className=" w-screen lg:w-1/3 lg:ml-40 h-fit lg:h-60  flex flex-col lg:justify-center">
@@ -62,12 +62,12 @@ export default function Section2() {
         <hr className=" w-1/2 opacity-10  " />
       </div>
 
-      <div className="h-full flex justify-center items-center ">
+      <div className="h-fit flex justify-center items-center ">
         {" "}
         {/* Lower Section */}
         <div
           id="card"
-          className=" flex flex-col items-center rounded-3xl -mt-52 md:-mt-72  z-10 h-[400px] w-[300px] md:w-[420px] backdrop-blur-sm md:backdrop-blur-md "
+          className=" flex flex-col items-center rounded-3xl z-10 h-fit lg:mt-20 pb-2 w-[300px] md:w-[420px] backdrop-blur-sm md:backdrop-blur-md "
         >
           <div className="flex justify-center mt-14 gap-3 items-center">
             <Image

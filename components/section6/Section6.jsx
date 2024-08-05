@@ -16,7 +16,7 @@ export default function Section6() {
           IDEOLOGY
         </p>
         <h2
-          className={`text-center text-nowrap z-10 text-[#829fe1] text-md sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className}`}
+          className={`text-center text-nowrap z-10 text-[#829fe1] text-xl sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className}`}
         >
           IDEA Network 3.0
         </h2>
@@ -100,7 +100,7 @@ export default function Section6() {
           </div>
           <div id="section6content" className="ml-0">
             <h1
-              className={`${spaceGrotesk.className} text-[24px] -ml-5 lg:-ml-0 -mt-2 font-semibold text-[#7F9ED0]`}
+              className={`${spaceGrotesk.className} text-[24px] px-4 lg:px-0 -ml-5 lg:-ml-0 -mt-2 font-semibold text-[#7F9ED0]`}
             >
               Stablecoin Availability
             </h1>
@@ -120,7 +120,7 @@ export default function Section6() {
           </div>
           <div id="section6content" className="ml-0">
             <h1
-              className={`${spaceGrotesk.className} text-[24px] -ml-5 lg:-ml-0 -mt-2 font-semibold text-[#7F9ED0]`}
+              className={`${spaceGrotesk.className} text-[24px] -ml-5 px-4 lg:px-0 lg:-ml-0 -mt-2 font-semibold text-[#7F9ED0]`}
             >
               Application Rewards and Redemption
             </h1>
@@ -140,7 +140,7 @@ export default function Section6() {
           </div>
           <div id="section6content" className="lg:ml-1">
             <h1
-              className={`${spaceGrotesk.className} text-[24px] -ml-5 lg:-ml-0 -mt-2 font-semibold text-[#7F9ED0]`}
+              className={`${spaceGrotesk.className} text-[24px] px-4 lg:px-0 -ml-5 lg:-ml-0 -mt-2 font-semibold text-[#7F9ED0]`}
             >
               Application Rewards and Redemption
             </h1>

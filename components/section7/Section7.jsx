@@ -35,25 +35,29 @@ export default function Section7() {
       </div>
       <div className=" w-full flex flex-col lg:flex-row h-full z-10 relative">
         <div id="left" className=" hidden lg:block w-[40%]">
-          <div id="image" className="mt-60 h-72 ml-48 w-72">
+          <div id="image" className="lg:mt-40 xl:mt-60 h-72 ml-48 w-72">
             <Image src={icons} alt="icons"></Image>
           </div>
-          <div className="absolute h-fit left-[20%] top-[48%] rounded-full border-none outline-none  backdrop-blur-md">
+          <div className="absolute h-fit left-[24%] xl:left-[20%] top-[45%] rounded-full border-none outline-none  backdrop-blur-md">
             <Image className="h-24 w-64" src={bgLogo} alt="bgLogo" />
           </div>
 
-          <p className="absolute hidden lg:block left-[31%] top-[40%] tracking-widest text-[#162c60] ">
+          <p className="absolute hidden xl:block left-[31%] top-[40%] tracking-widest text-[#162c60] ">
             ---------------------------
+          </p>
+          <p className="absolute hidden lg:block xl:hidden left-[38%] top-[41.5%] tracking-widest text-[#162c60] ">
+            --------------------
           </p>
         </div>
 
-        <div id="right" className=" w-full lg:w-[60%]">
-          <div className="absolute hidden lg:block left-[50%] top-[22%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
-          <div className="absolute hidden lg:block left-[50%] bottom-[38%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
+        <div id="right" className=" w-full  lg:w-[60%]">
+          <div className="absolute hidden lg:block lg:left-[57.7%] xl:left-[50%] lg:top-[21%] xl:top-[22%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
 
-          <div className=" flex flex-col gap-[50px] lg:gap-[90px] overflow-y-scroll hide-scrollbar lg:ml-20 mt-10 w-full lg:w-[60%] h-fit lg:h-[75%]">
+          <div className="absolute hidden lg:block lg:left-[57.7%] xl:left-[50%] lg:bottom-[34%] xl:bottom-[38%] border-[#162c60] h-32 w-fit border-r-2 border-dashed"></div>
+
+          <div className=" flex flex-col gap-[50px] lg:gap-[50px]  xl:gap-[90px] overflow-y-scroll hide-scrollbar lg:mx-auto xl:ml-20 mt-10 w-full lg:w-[60%] h-fit lg:h-[75%]">
             {/* Card 1 */}
-            <div className=" w-[80%] mt-3 min-h-36 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
+            <div className=" w-[80%] sm:w-[50%] lg:w-[80%] mt-3 min-h-36 lg:ml-8 flex flex-col mx-auto lg:flex-row justify-center items-center lg:justify-start gap-5">
               <motion.div
                 animate={{
                   scale: [0.9, 1.1, 0.9],
@@ -89,7 +93,7 @@ export default function Section7() {
             </div>
 
             {/* Card 2 */}
-            <div className="w-[80%] min-h-40 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
+            <div className="w-[80%] sm:w-[50%] lg:w-[80%] min-h-40 lg:ml-8 flex flex-col mx-auto lg:flex-row justify-center items-center lg:justify-start gap-5">
               <motion.div
                 animate={{
                   scale: [0.9, 1.1, 0.9],
@@ -130,7 +134,7 @@ export default function Section7() {
             </div>
 
             {/* Card 3 */}
-            <div className=" w-[80%] min-h-40 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
+            <div className=" w-[80%] sm:w-[50%] lg:w-[80%] min-h-40 lg:ml-8 flex flex-col mx-auto lg:flex-row justify-center items-center lg:justify-start gap-5">
               <motion.div
                 animate={{
                   scale: [0.9, 1.1, 0.9],
@@ -153,17 +157,17 @@ export default function Section7() {
                   Q3
                 </h2>
                 <li
-                  className={`${poppins.className} text-[#829fe1] text-sm mt-2 ml-2`}
+                  className={`${poppins.className} text-[#829fe1] text-nowrap text-sm mt-2 ml-2`}
                 >
                   NFT Staking Platform
                 </li>
                 <li
-                  className={`${poppins.className} text-[#829fe1] text-sm ml-2`}
+                  className={`${poppins.className} text-[#829fe1] text-nowrap  text-sm ml-2`}
                 >
-                  Play to Earn Mobile Game
+                  Play to Earn Mobile
                 </li>
                 <li
-                  className={`${poppins.className} text-[#829fe1] text-sm ml-2`}
+                  className={`${poppins.className} text-[#829fe1] text-nowrap text-sm ml-2`}
                 >
                   IDEA GPT
                 </li>
@@ -171,7 +175,7 @@ export default function Section7() {
             </div>
 
             {/* Card 4 */}
-            <div className=" w-[80%] mb-10 lg:mb-0 min-h-40 ml-8 flex flex-col lg:flex-row justify-center items-center lg:justify-start gap-5">
+            <div className=" w-[80%] sm:w-[50%] lg:w-[80%] mb-10 lg:mb-0 min-h-40 lg:ml-8 flex flex-col mx-auto lg:flex-row justify-center items-center lg:justify-start gap-5">
               <motion.div
                 animate={{
                   scale: [0.9, 1.1, 0.9],

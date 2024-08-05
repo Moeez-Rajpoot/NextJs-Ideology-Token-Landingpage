@@ -22,7 +22,7 @@ export default function Section5() {
           Powered by Crypto.com
         </p>
         <h2
-          className={`text-center text-nowrap text-[#829fe1] text-md sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className}`}
+          className={`text-center text-nowrap text-[#829fe1] text-xl sm:text-[40px] mt-1 font-semibold ${spaceGrotesk.className}`}
         >
           Features
         </h2>
@@ -37,7 +37,7 @@ export default function Section5() {
         ></Image>
 
         <h2
-          className={`absolute hidden lg:block text-4xl font-semibold text-white top-[42%] right-[47.5%] ${spaceGrotesk.className}`}
+          className={`absolute hidden lg:block text-4xl font-semibold text-white top-[42%] right-[47.5%] md:right-[46%]  ${spaceGrotesk.className}`}
         >
           IDEA
         </h2>

@@ -12,7 +12,7 @@ export default function section3() {
         {" "}
         {/* Upper Heading Section */}
         <p
-          className={` w-full text-[#829fe1] text-md sm:text-xl text-center ${lato.className}`}
+          className={` w-full text-[#829fe1] mt-10 lg:mt-0 text-md sm:text-xl text-center ${lato.className}`}
         >
           Powered by Crypto.com
         </p>
@@ -24,7 +24,7 @@ export default function section3() {
       </div>
 
       {/* Lower Image Section */}
-      <div className="w-full h-full flex flex-col mt-10 sm:mt-0 lg:flex-row gap-5 justify-center items-center ">
+      <div className="w-full h-full flex flex-col mt-10  lg:flex-row gap-5 justify-center items-center ">
         <Card
           image={project1}
           headtext="WorkAsPro"
