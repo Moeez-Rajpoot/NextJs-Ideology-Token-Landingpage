@@ -9,7 +9,6 @@ export default function section3({ head }) {
   return (
     <div className="h-fit lg:h-screen bg-[#01091c] w-full">
       <div className=" w-screen h-fit  flex flex-col items-center">
-        {" "}
         {/* Upper Heading Section */}
         <p
           className={` w-full text-[#829fe1] mt-10 lg:mt-0 text-md sm:text-xl text-center ${lato.className}`}

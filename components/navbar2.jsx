@@ -13,7 +13,12 @@ const Poppin = Poppins({
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [dropdownStates, setDropdownStates] = useState({
+    games: false,
+    products: false,
+    learnMore: false,
+    contactUs: false,
+  });
   const userMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const hamburgerRef = useRef(null);
@@ -26,10 +31,7 @@ const Navbar = () => {
       if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
         setIsOpen(false);
       }
-      if (
-        mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target)
-      ) {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
@@ -40,9 +42,38 @@ const Navbar = () => {
     };
   }, []);
 
-  // const handleUserMenu = (option) => {
-  //   setIsUserMenuOpen(option);
-  // }
+  const handleMouseEnter = (menu) => {
+    if (window.innerWidth >= 768) {
+      setDropdownStates((prevState) => ({
+        ...prevState,
+        [menu]: true,
+      }));
+    }
+  };
+
+  const handleMouseLeave = (menu) => {
+    if (window.innerWidth >= 768) {
+      setDropdownStates((prevState) => ({
+        ...prevState,
+        [menu]: false,
+      }));
+    }
+  };
+
+  const handleDropdownClick = (menu) => {
+    setDropdownStates((prevState) => {
+      const newStates = {
+        games: false,
+        products: false,
+        learnMore: false,
+        contactUs: false,
+      };
+      return {
+        ...newStates,
+        [menu]: !prevState[menu],
+      };
+    });
+  };
 
   return (
     <>
@@ -57,7 +88,7 @@ const Navbar = () => {
           src={Logo}
           alt="logo"
         />
-        <div className="flex items-center ">
+        <div className="flex items-center">
           <button
             ref={hamburgerRef}
             onClick={() => {
@@ -70,69 +101,89 @@ const Navbar = () => {
           </button>
           <div
             ref={mobileMenuRef}
-            className={`menu ${
-              isOpen ? "flex" : "hidden"
-            } md:flex items-center justify-end flex-col md:flex-row w-full md:w-auto fixed top-20 right-0 sm:relative sm:top-0 backdrop-blur-xl md:bg-transparent`}
+            className={`menu ${isOpen ? "flex" : "hidden"} md:flex items-center justify-end flex-col md:flex-row w-full md:w-auto fixed top-20 right-0 md:relative md:top-0 backdrop-blur-xl md:bg-transparent`}
             style={{ zIndex: 9 }}
           >
             <ul className="flex flex-col md:flex-row list-none w-full text-sm mt-1 md:mr-6">
               <li
-              // onClick={() => handleUserMenu("games")}
-              // onMouseOut={() => setIsUserMenuOpen(false)}
+                onMouseEnter={() => handleMouseEnter("games")}
+                onMouseLeave={() => handleMouseLeave("games")}
+                onClick={() => handleDropdownClick("games")}
+                className="relative"
+              >
+                <a
+                  
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-5 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
+                  href="#"
+                >
+                  Games <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
+                </a>
+                {dropdownStates.games && (
+                  <div className="absolute top-full left-0 bg-[#0a72bc] lg:bg-[#0a72bc06] lg:backdrop-blur-lg text-white border-x-4 w-full h-52 lg:h-fit  lg:w-40 border-[#0a71bc] rounded-xl mt-1 z-10">
+                    <ul className="py-2">
+                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer ">Car Games</li>
+                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer">Shooting Games</li>
+                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer">Bike Games</li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+              <li
+                onMouseEnter={() => handleMouseEnter("products")}
+                onMouseLeave={() => handleMouseLeave("products")}
+                onClick={() => handleDropdownClick("products")}
+                className="relative"
+              >
+                <a
+                  
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
+                  href="#"
+                >
+                  Products <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
+                </a>
+                {dropdownStates.products && (
+                  <div className="absolute top-full left-0 bg-[#0a72bc] lg:bg-[#0a72bc06] lg:backdrop-blur-lg text-white border-x-4 w-full h-52 lg:h-fit  lg:w-40 border-[#0a71bc] rounded-xl mt-1 z-10">
+                    <ul className="py-2">
+                      <li className="px-4 lg:py-2 py-4  hover:underline hover:cursor-pointer ">Tech Gadgets</li>
+                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer">Home Appliances</li>
+                      <li className="px-4 lg:py-2 py-4  hover:underline hover:cursor-pointer">Outdoor Gear</li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+              <li
+                onMouseEnter={() => handleMouseEnter("learnMore")}
+                onMouseLeave={() => handleMouseLeave("learnMore")}
+                onClick={() => handleDropdownClick("learnMore")}
+                className="relative"
+              >
+                <a
+                  
+                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
+                  href="#"
+                >
+                  Learn more <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
+                </a>
+                {dropdownStates.learnMore && (
+                  <div className="absolute top-full left-0 bg-[#0a72bc] lg:bg-[#0a72bc06] lg:backdrop-blur-lg text-white border-x-4 w-full h-52 lg:h-fit lg:w-40 border-[#0a71bc] rounded-xl mt-1 z-10">
+                    <ul className="py-2">
+                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer ">Tutorials</li>
+                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer">Webinars</li>
+                      <li className="px-4 lg:py-2 py-4 hover:underline hover:cursor-pointer">eBooks</li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+              <li
               >
                 <a
                   onClick={() => setIsOpen(false)}
-                  className={` text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-5 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
-                  href="#"
-                >
-                  Games <i className="fa-solid fa-users"></i>
-                  <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
-                </a>
-              </li>
-              {/* {isUserMenuOpen === "games" && (
-                  <div className="absolute top-full left-0 border-y-2 border-[#0b71bc] border-opacity-50  rounded-md ">
-                    <ul className="py-2">
-                      <li className="px-4 py-2 text-nowrap hover:border-b-[1px] hover:border-white hover:border-opacity-25">
-                        Car Games
-                      </li>
-                      <li className="px-4 py-2 text-nowrap hover:border-b-[1px] hover:border-white hover:border-opacity-25">
-                        Shooting Games
-                      </li>
-                      <li className="px-4 py-2 text-nowrap hover:border-b-[1px] hover:border-white hover:border-opacity-25">
-                        Bike Games
-                      </li>
-                    </ul>
-                  </div>
-                )} */}
-
-              <li>
-                <a
-                  onClick={() => setIsOpen(false)}
                   className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
                   href="#"
                 >
-                  Products <i className="fa-solid fa-plus"></i>
-                  <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
+                  Contact us 
                 </a>
-              </li>
-              <li>
-                <a
-                  onClick={() => setIsOpen(false)}
-                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className}h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
-                  href="#"
-                >
-                  Learn more <i className="fa-brands fa-discourse"></i>
-                  <FontAwesomeIcon className="ml-2 h-3" icon={faChevronDown} />
-                </a>
-              </li>
-              <li>
-                <a
-                  onClick={() => setIsOpen(false)}
-                  className={`text-center flex py-3 sm:px-2 text-[#7F9ED0] items-center sm:mt-0 justify-center sm:mb-7 mt-2 md:mb-0 md:mr-5 text-nowrap ${Poppin.className} h-[50px] lg:h-[86px] border-b-[1px] border-transparent hover:border-b-[1px] hover:border-[#0b71bc]`}
-                  href="#"
-                >
-                  Contact us <i className="fa-brands fa-discourse"></i>
-                </a>
+                
               </li>
             </ul>
             <button
